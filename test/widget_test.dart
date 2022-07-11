@@ -5,12 +5,10 @@ import 'package:golden_tests/main.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 
 Future<void> theAppIsRendered(WidgetTester tester) async {
-  await loadAppFonts();
   await tester.pumpWidgetBuilder(const MyApp());
 }
 
 Future<void> deviceBuilder(WidgetTester tester) async {
-  await loadAppFonts();
   final builder = DeviceBuilder()
     ..overrideDevicesForAllScenarios(devices: [
       Device.iphone11,
